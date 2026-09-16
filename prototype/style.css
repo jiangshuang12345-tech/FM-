@@ -12,7 +12,7 @@ body{margin:0;font-family:"Helvetica Neue",Arial,"PingFang SC",sans-serif;color:
 .sidebar summary:hover,.sidebar a:hover{background:#eee7e1}
 .sidebar details>a,.nested,.inner summary{padding-left:43px}
 .sidebar .inner a,.sidebar .inner .menu-static{padding:12px 18px 12px 63px}
-.sidebar .menu-static{color:#606266;cursor:default}
+.sidebar .inner>.menu-static{display:block;width:100%;padding:12px 18px 12px 63px;color:#606266;cursor:default;white-space:nowrap}
 .sidebar .active{color:var(--orange);background:#fff;border-right:3px solid var(--orange)}
 .sidebar.collapsed{width:66px}
 .sidebar.collapsed nav{display:none}
