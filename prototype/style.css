@@ -38,8 +38,9 @@ form{width:780px}
 .field input:focus,select:focus,textarea:focus{border-color:var(--blue)}
 select{height:40px}
 .field small{display:block;color:#f56c6c;font-size:12px;margin-top:6px}
+.field.is-hidden{display:none}
 .choices{display:flex;gap:22px;align-items:center;height:40px}
-.choices.wrap{gap:15px;white-space:nowrap}
+.choices.wrap{gap:15px;white-space:nowrap;width:560px}
 .choices input{accent-color:var(--blue)}
 .stepper{display:flex;width:180px}
 .stepper input{border-radius:0!important;text-align:center}
