@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>VIPKID CMS · 编辑FM资源</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="logo">VIP<span>KID</span></div><button id="collapse" aria-label="收起菜单">☰</button></div>
+    <nav>
+      <details><summary>▦　学习资料</summary><a>资料下发</a><a>发送记录</a></details>
+      <details><summary>▤　数据线索</summary><a>模板管理</a><a>tTraceId列表</a><a>业务线管理</a></details>
+      <details><summary>◉　AI审核</summary><a>上传图片审核</a></details>
+      <details open><summary>▦　产品管理</summary><div class="nested">星球书库</div><div class="nested">VFT</div><details open class="inner"><summary>FM管理2.0</summary><a class="active">上传音频资源</a></details></details>
+      <details><summary>⌕　SEO管理</summary><a>文章管理</a><a>锚文本互链</a><a>AB配置</a></details>
+      <details><summary>✎　海报管理</summary><a>个性化海报</a><a>APP&微信海报</a><a>海报文案</a></details>
+      <details><summary>▦　APP3.0</summary><a>通用配置管理</a><a>我的入口</a><a>模板区域管理</a></details>
+    </nav>
+  </aside>
+  <div class="page">
+    <header><b>CMS</b><span>基础内容管理</span><div class="account">姜双　 <a>登出</a>　 <a>导航页</a></div></header>
+    <main>
+      <button class="back" type="button" onclick="history.back()">‹ 返回</button>
+      <section class="card">
+        <h1>编辑FM资源</h1>
+        <div class="content">
+          <form id="fmForm" novalidate>
+            <div class="field required"><label>所属专辑:</label><div><div class="choices"><label><input type="radio" name="album" value="default" checked> 默认专辑</label><label><input type="radio" name="album" value="other"> 非默认专辑</label></div><select id="albumName" disabled><option>请输入专辑名</option><option>自然拼读</option><option>睡前故事</option></select><small>选择默认专辑，则以单曲形式显示在前端</small></div></div>
+            <div class="field required"><label for="cname">中文名称:</label><div><input id="cname" maxlength="30"><small>友情提示：标题小于30汉字</small></div></div>
+            <div class="field required"><label for="ename">英文名称:</label><div><input id="ename" maxlength="50"><small>友情提示：标题小于50个字符</small></div></div>
+            <div class="field required"><label>类型:</label><div class="choices wrap"><label><input type="checkbox" checked> 早读</label><label><input type="checkbox"> 哄睡</label><label><input type="checkbox" checked> 磨耳朵</label><label><input type="checkbox"> 唱儿歌</label><label><input type="checkbox"> 听故事</label><label><input type="checkbox" checked> 学英语</label></div></div>
+            <div class="field required"><label for="age">年龄:</label><select id="age"><option>0-3岁</option><option selected>4-6岁</option><option>7-9岁</option><option>9岁以上</option></select></div>
+            <div class="field required"><label for="level">level:</label><select id="level"><option selected>level 1</option><option>level 2</option><option>level 3</option><option>level 4</option><option>level 5</option><option>level 6</option><option>level 7</option></select></div>
+            <div class="field required"><label for="radio">电台:</label><div><select id="radio"><option selected>早读课</option><option>随身听</option><option>哄睡电台</option><option>不属于任何电台</option></select><small>是否推荐至早读/哄睡电台</small></div></div>
+            <div class="field required"><label>权重:</label><div class="stepper"><button type="button" data-step="-1">−</button><input id="weight" type="number" min="0" max="99999" value="20000"><button type="button" data-step="1">＋</button></div></div>
+            <div class="field required"><label>配图:</label><div><label class="upload image-upload"><input type="file" id="cover" accept="image/*"><span id="coverText">＋<br>选择文件</span><img id="coverPreview" hidden alt="封面预览"></label><small>友情提示：图片尺寸为：353 × 353，小于200K</small></div></div>
+            <div class="field required"><label>音频资源:</label><div><label class="upload audio-upload"><input type="file" id="audioFile" accept="audio/mp3,audio/mpeg"><span id="audioText">♫　选择文件</span><audio id="audioPreview" controls hidden></audio></label><small>友情提示：上传音频.mp3格式，小于5M</small></div></div>
+            <div class="field required"><label>音频时长:</label><div><div class="stepper"><button type="button" data-step="-1">−</button><input id="duration" type="number" min="0" max="99999" value="28"><button type="button" data-step="1">＋</button></div><small>友情提示：请填写音频实际秒数，仅支持整数</small></div></div>
+            <div class="field required wide"><label for="translation">中英译文:</label><div><textarea id="translation" rows="9" maxlength="20000"></textarea><small>友情提示：译文小于20000字符，支持换行</small></div></div>
+            <div class="field required"><label for="hot">是否热门:</label><select id="hot"><option selected>是</option><option>否</option></select></div>
+            <div class="field required"><label for="power">播放权限:</label><select id="power"><option>所有人可看</option><option selected>登录后可看</option></select></div>
+            <div class="field required"><label>起始播放量:</label><div class="stepper"><button type="button" data-step="-1">−</button><input id="plays" type="number" min="0" max="9999999" value="9999999"><button type="button" data-step="1">＋</button></div></div>
+            <div class="field required"><label>发布类型:</label><div class="choices"><label><input type="radio" name="publish" value="now"> 立即发布</label><label><input type="radio" name="publish" value="scheduled" checked> 定时发布</label></div></div>
+            <div class="field" id="dateRow"><label for="date">发布日期:</label><input id="date" type="date"></div>
+            <div class="actions"><button class="primary" type="submit">保存</button><button type="reset">重置</button></div>
+          </form>
+          <aside class="preview"><b>封面图预览</b><div id="largePreview">353 × 353</div></aside>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body></html>
