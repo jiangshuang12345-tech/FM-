@@ -24,7 +24,7 @@
     <main>
       <button class="back" type="button" onclick="history.back()">‹ 返回</button>
       <section class="card">
-        <h1>编辑FM资源</h1>
+        <h1 id="formTitle">编辑FM资源</h1>
         <div class="content">
           <form id="fmForm" novalidate>
             <div class="field required"><label>所属专辑:</label><div><div class="choices"><label><input type="radio" name="album" value="default" checked> 默认专辑</label><label><input type="radio" name="album" value="other"> 非默认专辑</label></div><select id="albumName" disabled><option>请输入专辑名</option><option>自然拼读</option><option>睡前故事</option></select><small>选择默认专辑，则以单曲形式显示在前端</small></div></div>
