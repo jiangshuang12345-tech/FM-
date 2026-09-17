@@ -42,6 +42,19 @@ select{height:40px}
 .choices{display:flex;gap:22px;align-items:center;height:40px}
 .choices.wrap{gap:15px;white-space:nowrap;width:560px}
 .choices input{accent-color:var(--blue)}
+.cascader{position:relative;width:330px}
+.cascader-trigger{width:100%;height:40px;padding:0 12px;border:1px solid var(--line);border-radius:4px;background:#fff;color:#606266;display:flex;align-items:center;justify-content:space-between;cursor:pointer;text-align:left}
+.cascader-trigger:hover,.cascader.open .cascader-trigger{border-color:var(--blue)}
+.cascader-trigger .arrow{color:#c0c4cc;font-size:17px;transition:.2s}
+.cascader.open .arrow{transform:rotate(180deg)}
+.cascader-panel{position:absolute;top:44px;left:0;z-index:8;display:flex;background:#fff;border:1px solid #e4e7ed;border-radius:4px;box-shadow:0 2px 12px rgba(0,0,0,.12);overflow:hidden}
+.cascader-panel[hidden]{display:none}
+.cascader-level{width:150px;min-height:92px;padding:6px 0}
+.cascader-level+.cascader-level{border-left:1px solid #e4e7ed}
+.cascader-level button,.cascader-level label{width:100%;height:38px;border:0;background:#fff;padding:0 16px;display:flex;align-items:center;justify-content:space-between;color:#606266;cursor:pointer;white-space:nowrap}
+.cascader-level button:hover,.cascader-level label:hover,.cascader-level button.selected{background:#f5f7fa;color:var(--blue)}
+.secondary-level label{justify-content:flex-start;gap:8px}
+.secondary-level input{accent-color:var(--blue)}
 .stepper{display:flex;width:180px}
 .stepper input{border-radius:0!important;text-align:center}
 .stepper button{width:38px;border:1px solid var(--line);background:#f5f7fa;color:#606266;cursor:pointer}
