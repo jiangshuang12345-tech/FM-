@@ -108,6 +108,7 @@ main{padding:10px}
 .filters .filter-multi label{display:flex;height:32px;padding:0 12px;gap:8px;align-items:center;grid-template-columns:none}
 .filters .filter-multi input[type="checkbox"]{width:14px;height:14px;min-width:14px;margin:0;accent-color:var(--blue)}
 .module-tabs{display:flex;border-bottom:1px solid #ebeef5;margin-bottom:14px}.module-tab{min-width:92px;height:42px;padding:0 24px;border:0;border-bottom:3px solid transparent;background:#fff;color:#606266;font-size:15px;cursor:pointer}.module-tab:hover{color:#ff7043}.module-tab.active{color:#ff7043;border-bottom-color:#ff7043;font-weight:600}.outside-only[hidden]{display:none!important}
+.module-switch-row{display:flex;align-items:flex-start;justify-content:space-between;border-bottom:1px solid #ebeef5;margin-bottom:14px}.module-switch-row .module-tabs{border-bottom:0;margin-bottom:0}.module-actions{padding-top:3px}.module-actions button[hidden]{display:none}
 .filter-level>div{display:flex;gap:6px}
 .filter-level>div select{width:118px}
 .filter-cascade{min-width:300px}
