@@ -46,9 +46,12 @@ select{height:40px}
 .cascade-selects select{width:330px;flex:0 0 330px}
 .cascade-selects #typeSecondary{width:200px;flex-basis:200px}
 .cascade-selects select[hidden]{display:none}
+.level-selector{width:570px}
+.level-selector>select{width:330px}
 .level-cascade{display:flex;gap:10px;width:570px}
 .level-cascade select{width:180px;flex:0 0 180px}
 .level-cascade select[hidden]{display:none}
+.level-cascade[hidden],.level-selector>select[hidden]{display:none}
 .stepper{display:flex;width:180px}
 .stepper input{border-radius:0!important;text-align:center}
 .stepper button{width:38px;border:1px solid var(--line);background:#f5f7fa;color:#606266;cursor:pointer}
